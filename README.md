@@ -2,6 +2,7 @@
 
 WhisperRx is an AI-powered medical voice scribing and patient management web application designed for doctors and patients. It simplifies the process of documenting patient visits through voice recordings, AI transcription and automatic generation of structured SOAP medical reports.
 
+[![WhisperRx](https://github.com/user-attachments/assets/9a105720-f3d7-48f1-915b-5e8b51b76112)](https://youtu.be/07HW64FbT-I)
 ---
 ## 🚀 Features
 
@@ -84,6 +85,13 @@ cd frontend
 npm run dev
 ```
 The Web-App should be accessible at 'http://localhost:5173/'
+
+![Screenshot (280)](https://github.com/user-attachments/assets/e6e29acb-7a65-4d53-b67a-086502346573)
+![Screenshot (279)](https://github.com/user-attachments/assets/255d7dff-e80f-409b-aee0-0414442a186a)
+![Screenshot (281)](https://github.com/user-attachments/assets/f85d7b5c-1550-4249-9ff7-830c3f842363)
+![Screenshot (274)](https://github.com/user-attachments/assets/975091de-a20b-4f57-ac2c-4a0606c30a18)
+![Screenshot (275)](https://github.com/user-attachments/assets/c9a74daa-d276-4322-8473-d87ba7353603)
+
 
 ---
 
