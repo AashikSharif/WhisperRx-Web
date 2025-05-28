@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-container">
+        {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                <span>{{ message }}</span>
+                <button class="close-flash" onclick="this.parentElement.style.display='none';">&times;</button>
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    
+    <meta charset="UTF-8">
+    <title>Doctors | WhisperRx</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('patient_dashboard') }}" style="text-decoration: none;">
+            <div class="logo">WhisperRx</div>
+        </a>
+        <nav>
+            <a href="{{ url_for('patient_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('doctors_page') }}">Doctors</a>
+            <a href="{{ url_for('logout') }}" class="nav-btn">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="section-heading" style="font-size: 40px;">AVAILABLE DOCTORS</h2>
+        <section class="patients-grid">
+            {% for doctor in doctors %}
+            <div class="patient-card-list">
+                <div class="card-title">Doctor</div>
+                <div class="patient-info">
+                    <img src="{{ doctor.profile_image or url_for('static', filename='default_avatar.jpg') }}" alt="Doctor">
+                    <p><strong>{{ doctor.name }}</strong></p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+
+    <script>
+        setTimeout(() => {
+          document.querySelectorAll('.flash-message').forEach(msg => {
+            msg.style.display = 'none';
+          });
+        }, 5000);
+    </script>
+</body>
+<div class="flex-wrapper">
+<footer style="margin-top: auto;">
+    <p>© 2025 WhisperRx | All Rights Reserved</p>
+    <p style="margin-top: 6px;">
+      Created by 
+      <a href="https://www.linkedin.com/in/aashiksharif/" target="_blank" style="color: black; text-decoration: underline;">Aashik Sharif Basheer Ahamed</a> &amp; 
+      <a href="https://www.linkedin.com/in/shlok-tomar/" target="_blank" style="color: black; text-decoration: underline;">Shlok Tomar</a>
+    </p>
+  </footer>
+</div>
+
+  
+</html>
