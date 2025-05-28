@@ -63,16 +63,27 @@ MAIL_PASSWORD=your_email_password
 ```
 
 > Make sure to keep `.env` in your `.gitignore`.
+> Make sure to have 'instance/database.db' if the database doesn't exists.
+
 
 ---
-
 ## 🧪 Run the App
 
 ```bash
 flask run
 ```
+or
+```bash
+python app.py
+```
+App will be available at `http://localhost:80`
 
-App will be available at `http://localhost:5000`
+To Access Frontend:
+```bash
+cd frontend
+npm run dev
+```
+The Web-App should be accessible at 'http://localhost:5173/'
 
 ---
 
