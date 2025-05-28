@@ -2,12 +2,6 @@
 
 WhisperRx is an AI-powered medical voice scribing and patient management web application designed for doctors and patients. It simplifies the process of documenting patient visits through voice recordings, AI transcription and automatic generation of structured SOAP medical reports.
 
-## 🎥 Demo
-
-Watch a quick walkthrough of **WhisperRx** in action:
-
-https://github.com/user-attachments/assets/3b2b46ae-8dac-424a-943d-1742da1763f4
-
 ---
 ## 🚀 Features
 
