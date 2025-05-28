@@ -7,8 +7,8 @@ WhisperRx is an AI-powered medical voice scribing and patient management web app
 
 ### [WhisperRx](https://youtu.be/07HW64FbT-I)
 
+https://github.com/user-attachments/assets/5eb5d9dc-4322-42d0-a8c9-d846b42e2a68
 
-[![WhisperRx](https://github.com/user-attachments/assets/9a105720-f3d7-48f1-915b-5e8b51b76112)](https://youtu.be/07HW64FbT-I)
 ---
 ## 🚀 Features
 
