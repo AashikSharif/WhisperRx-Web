@@ -1,0 +1,181 @@
+<!-- doctor_view.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard | WhisperRx</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-container">
+      {% for category, message in messages %}
+        <div class="flash-message {{ category }}">
+          <span>{{ message }}</span>
+          <button class="close-flash" onclick="this.parentElement.style.display='none';">&times;</button>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+    <header>
+      <a href="{{ url_for('doctor_view') }}" style="text-decoration: none;">
+        <div class="logo">WhisperRx</div>
+      </a>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="{{ url_for('patients_page') }}">Patients</a>
+            <a href="{{ url_for('logout') }}" class="nav-btn">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Upcoming Appointments -->
+        <section class="upcoming-patients">
+            {% for appt in upcoming_appointments %}
+            <a href="{{ url_for('doctor_view', patient_id=appt['patient_id']) }}" class="patient-card">
+              <div class="card-title">Upcoming Patient</div>
+          
+              <div class="date-time-row">
+                <span class="date-chip">{{ appt.timestamp.strftime('%b %d, %Y') }}</span>
+                <span class="time-chip">{{ appt.timestamp.strftime('%I:%M %p') }}</span>
+              </div>
+          
+              <div class="patient-info">
+                <img src="{{ appt.profile_image or url_for('static', filename='default_avatar.jpg') }}" alt="Patient">
+                <p><strong>{{ appt.patient_name }}</strong></p>
+                <p class="visit-reason">{{ appt.reason or 'N/A' }}</p>
+              </div>
+            </a>
+            {% else %}
+            <p>No upcoming appointments.</p>
+            {% endfor %}
+          </section>
+          
+          <div class="bottom-section">
+            <!-- Sidebar -->
+            <aside class="sidebar" style="max-height: 707px;">
+              {% if selected_patient_data %}
+                {% for entry in selected_patient_data %}
+                <div class="patient-info-card">
+                  <h4 class="section-title">Patient Info</h4>
+                  <div class="patient-details">
+                    <img src="{{ entry.patient['profile_image'] or url_for('static', filename='default_avatar.jpg') }}" alt="Patient">
+                    <p class="patient-name">{{ entry.patient['patient_name'] }}</p>
+                    <p class="patient-email">{{ entry.patient['email'] }}</p>
+                  </div>
+                </div>
+                <h4 class="section-title" style="font-size: 20px;">Past Visits</h4>
+                <div class="past-visits">
+                  
+                  {% if entry.past_visits %}
+                    {% for v in entry.past_visits %}
+                    <div class="visit">
+                      <p><strong>Visit Date:</strong></p>
+                        <div class="date-time-row">
+                            <span class="date-chip">{{ v.timestamp.strftime('%b %d, %Y') }}</span>
+                            <span class="time-chip">{{ v.timestamp.strftime('%I:%M %p') }}</span>
+                        </div>
+                      <p><strong>Reason:</strong> {{ v['reason'] or 'N/A' }}</p>
+                      <span class="visit-transcript" style="display: none;">{{ v['transcript'] or '' }}</span>
+                    </div>
+                    {% endfor %}
+                  {% else %}
+                    <p style="color: gray;">No past visits recorded for this patient.</p>
+                  {% endif %}
+                </div>
+                {% endfor %}
+              {% endif %}
+            </aside>
+
+            <!-- Markdown Viewer (hidden by default) -->
+            <section class="markdown-section" id="markdown-viewer" style="display: none;">
+                <h2>Medical Record</h2>
+                <div id="markdown-content" class="markdown-box"> 
+                </div>
+            </section>
+                      
+            <!-- Visit Recorder (default visible) -->
+            <section class="visit-section full-height-panel" id="visit-section">
+              <h1 class="visit-title">Start a Visit</h1>
+            
+              {% if selected_patient_data %}
+              {% for entry in selected_patient_data %}
+              <div class="visit-container">
+            
+                <!-- Patient Info -->
+                <div class="visit-patient-header">
+                  <h3>{{ entry.patient['patient_name'] }}</h3>
+                  <input type="hidden" id="patient_id" value="{{ entry.patient['patient_id'] }}">
+                  <input type="hidden" id="patient_name" value="{{ entry.patient['patient_name'] }}">
+                  <input type="hidden" id="reason" value="{{ entry.patient['reason'] }}">
+                </div>
+                <p class="hint">Speak naturally. We’ll handle the rest.</p>
+
+            
+                <!-- Voice Visualizer -->
+                <div class="voice-visualizer-wrap">
+                  <div id="voice-visualizer" class="pulsating-circle" style="display: none;"></div>
+                  <p id="listening-text" class="listening-label" style="display: no; visibility: hidden;"> Listening...</p>
+                </div>
+            
+                <!-- Controls -->
+                <div class="recording-controls">s
+                  <button id="record-btn" class="record-btn record-btn--action">
+                    <i class="fas fa-microphone"></i> Start Recording
+                  </button>
+                
+                  <button id="pause-btn" class="record-btn record-btn--action" style="display: none;">
+                    <i class="fas fa-pause"></i> Pause
+                  </button>
+                
+                  <button id="resume-btn" class="record-btn record-btn--action" style="display: none;">
+                    <i class="fas fa-play"></i> Resume
+                  </button>
+                </div>
+                
+                <p id="live-timer" class="live-timer" style="display: none;">⏱️ 00:00</p>
+
+                <!-- Audio Preview -->
+                <audio id="audio-preview" controls style="display: none; margin-top: 10px;"></audio>
+            
+                <!-- Transcript Feedback -->
+                <p id="transcript-output" class="transcript-text" style="margin-top: 12px;"></p>
+            
+              </div>
+              {% endfor %}
+              {% else %}
+              <p>Select a patient to begin recording.</p>
+              {% endif %}
+            </section>
+            
+  
+          </div>
+          
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/doctor_view.js') }}"></script>
+    <script>
+      setTimeout(() => {
+        document.querySelectorAll('.flash-message').forEach(msg => {
+          msg.style.display = 'none';
+        });
+      }, 5000); // Hides after 5 seconds
+    </script>
+    
+</body>
+<footer>
+  <p>© 2025 WhisperRx | All Rights Reserved</p>
+  <p style="margin-top: 6px;">
+    Created by 
+    <a href="https://www.linkedin.com/in/aashiksharif/" target="_blank" style="color: black; text-decoration: underline;">Aashik Sharif Basheer Ahamed</a> &amp; 
+    <a href="https://www.linkedin.com/in/shlok-tomar/" target="_blank" style="color: black; text-decoration: underline;">Shlok Tomar</a>
+  </p>
+</footer>
+
+</html>

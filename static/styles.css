@@ -1,0 +1,1081 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdf6ee;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 2px solid #007bff;
+    background-color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a.logo {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  a.logo:link,
+a.logo:visited,
+a.logo:hover,
+a.logo:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+  
+
+.about-btn {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #8d4aff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #7a39db;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.social-icons span {
+    margin-right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    text-align: left;
+}
+
+.column p {
+    margin: 5px 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f0ea;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+.nav-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-btn:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+  }
+  
+  .nav-btn:active {
+    transform: scale(0.98);
+  }
+  
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Upcoming Patients Section */
+.upcoming-patients {
+    display: flex;
+    gap: 1.5rem;
+    width: 90%;
+    overflow-x: auto;
+    background-color: #e8e0d8;
+    padding: 20px;
+    border-radius: 12px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.upcoming-patients::-webkit-scrollbar {
+    height: 8px;
+}
+
+.upcoming-patients::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.patient-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto; 
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.patient-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.date-time-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.date-chip,
+.time-chip {
+    font-size: 14px;
+    background-color: #eaf1ff;
+    color: #007bff;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.patient-info {
+    text-align: center;
+}
+
+.patient-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+    object-fit: cover;
+}
+
+.visit-reason {
+    font-size: 16px;
+    color: #6c757d;
+    margin-top: 2px;
+}
+
+
+/* Grouping Sidebar and Visit Section */
+.bottom-section {
+    display: flex;
+    width: 93%;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 25%;
+    background-color: #d6cec6;
+    padding: 20px;
+    min-height: 660px;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Patient Info Card */
+  .patient-info-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    cursor:pointer;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  .patient-info-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+  
+  .patient-details img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .patient-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .patient-role,
+  .patient-email {
+    font-size: 13px;
+    color: #777;
+    margin-top: 2px;
+  }
+  
+  /* Past Visits */
+  .past-visits {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-top: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+  }
+  
+  /* For WebKit browsers */
+  .past-visits::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .past-visits::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .past-visits::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  .visit-scroll-area {
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+  }
+
+  /* Scrollbar Styling for WebKit */
+  .visit-scroll-area::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .visit-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .visit-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  .visit {
+    background-color: white;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    font-size: 14px;
+    max-width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+  }
+  
+  .visit:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+  /* Section Headers */
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #444;
+  }
+  
+  /* Start Visit Section */
+  .visit-section {
+    flex: 1;
+    background-color: #e8e0d8;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .full-height-panel {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .visit-section.full-height-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-block-end: auto;
+  }
+  
+  /* Visit Section Content */
+  .visit-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .audio-visual {
+    font-size: 20px;
+    color: #7ac4f2;
+    margin: 20px 0;
+  }
+  
+  .capture-btn {
+    background-color: #b499d4;
+    color: white;
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .capture-btn:hover {
+    background-color: #a280c5;
+  }
+  
+/* Login page specific styles */
+.login-body {
+    background-color: #b6ccf0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+    width: 50%;
+    background-color: #a6e3e9;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.login-left h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.login-left span {
+    color: teal;
+}
+
+.login-left img {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.login-right {
+    width: 50%;
+    padding: 40px;
+}
+
+.login-right select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.login-right h2 {
+    color: #008080;
+    margin-bottom: 25px;
+}
+
+.login-right label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-right input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn.full {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn.full:hover {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Patient Dashboard Specific Styling */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.booking-form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+    color: #444;
+    font-size: 20px;
+}
+
+.booking-form select,
+.booking-form input[type="datetime-local"] {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 50%;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.visit {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.visit p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+h2, h3 {
+    color: #444;
+    font-weight: 700;
+}
+
+.btn.full {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #8d4aff, #5b2ac0);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn.full:hover {
+    background: linear-gradient(to right, #5b2ac0, #8d4aff);
+}
+
+.markdown-section {
+    flex-grow: 1;
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow-y: auto;
+  }
+  
+  .markdown-box {
+    text-align: left;
+    max-height: 500px;
+    overflow-y: auto;
+    line-height: 1.6;
+  }
+  
+  .recording-section {
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recording-section button {
+    background-color: #f47777;
+    color: white;
+    font-weight: bold;
+  }
+
+  .capture-btn-Record {
+    margin-top: 40px;
+    padding: 12px 24px;
+    background-color: #00bcd4;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .capture-btn-Record:hover {
+    background-color: #00acc1;
+  }
+
+  .pulsating-circle {
+    animation-play-state: running;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 5px solid hsl(340, 100%, 80%);
+    box-shadow: 0 0 25px hsl(340, 100%, 80%);
+    animation: pulse 1.5s ease-in-out infinite, colorShift 6s linear infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes colorShift {
+    0%   { border-color: hsl(340, 100%, 80%); box-shadow: 0 0 25px hsl(340, 100%, 80%); }
+    25%  { border-color: hsl(200, 100%, 80%); box-shadow: 0 0 25px hsl(200, 100%, 80%); }
+    50%  { border-color: hsl(120, 100%, 80%); box-shadow: 0 0 25px hsl(120, 100%, 80%); }
+    75%  { border-color: hsl(45, 100%, 80%);  box-shadow: 0 0 25px hsl(45, 100%, 80%);  }
+    100% { border-color: hsl(340, 100%, 80%); box-shadow: 0 0 25px hsl(340, 100%, 80%); }
+  }
+  
+  .patients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.patient-card-list {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.patient-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor:pointer;
+
+}
+
+
+.patient-card .card-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.patient-card .patient-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+
+.visit-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #222;
+  }
+  
+  .visit-container {
+    background: #f8f6f4;
+    padding: 20px;
+    width: 80%;
+    border-radius: 12px;
+    margin: 0 auto 20px auto; /* This centers it horizontally */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .visit-patient-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .voice-visualizer-wrap {
+    flex-direction: column;
+    align-items: center;
+    margin: 18px 0;
+  }
+  
+  .listening-label {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .recording-controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .transcript-text {
+    color: #333;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .capture-btn-Record i {
+    margin-right: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+
+  }
+  
+  #listening-text {
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5a5a5a;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  .live-timer {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+    color: #000000;
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  
+  .hint {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .record-btn {
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease; 
+    cursor:pointer;
+
+  }
+  
+  .record-btn--action {
+    display: block;
+    width: 30%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: #f6e58d;
+    color: #000;
+    transition: all 0.5s ease 0s; 
+    box-shadow: 0 10px #f9ca24;
+  }
+  .record-btn--home {
+    display: block;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: #f6e58d;
+    color: #000;
+    transition: all 0.5s ease 0s; 
+    box-shadow: 0 10px #f9ca24;
+  }
+  
+  .record-btn--action span {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  
+  .record-btn--action span::before {
+    content: '\f04c'; 
+    color: #000;
+    font-size: 1rem;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all 0.1s ease 0s;
+  }
+  
+  .record-btn--action:hover span {
+    padding-left: 1.5rem; 
+  }
+  
+  .record-btn--action:hover span::before {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .record-btn--action:active {
+    box-shadow: 0 5px #f0932b;
+    transform: translateY(5px);
+  }
+
+.record-btn--home span {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  
+  .record-btn--home span::before {
+    content: '\f04c'; 
+    color: #000;
+    font-size: 1rem;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease 0.3s;
+  }
+    
+  .record-btn--home:active {
+    box-shadow: 0 -2px #f0932b;
+    transform: translateY(10px);
+  }
+
+  .flash {
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .flash.info {
+    background-color: #d0ebff;
+    color: #004085;
+  }
+  
+  .flash.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  .flash-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: auto;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  .flash-message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    font-size: 16px;
+    gap: 12px;
+  }
+  
+  .flash-message.success { background-color: #4caf50; }
+  .flash-message.error { background-color: #f44336; }
+  .flash-message.info { background-color: #2196f3; }
+  
+  .flash-message .close-flash {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  
+  @keyframes slideFade {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .hero-subtitle {
+    margin-top: 10px;
+    font-size: 1.1rem;
+
+    color: #444;
+  }
+  
+  .hero-buttons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  /* Footer tweaks */
+  
+  footer {
+  background-color: #f4f0eb;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+  .homepage-footer {
+    padding: 40px 20px;
+    background-color: #f4f0eb;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .footer-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .footer-topic {
+    font-weight: 600;
+  }
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* leave room for header */
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .form-control {
+    width: 50%;
+    padding: 10px;
+    height: 70px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor:pointer;
+  }
+  
+  input[readonly] {
+    cursor: pointer;
+    background-color: #fdfdfd;
+  }
+  
+  .flex-wrapper {
+    display: flex;
+    min-height: 38vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
